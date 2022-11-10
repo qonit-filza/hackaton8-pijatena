@@ -429,17 +429,17 @@ let listTerapis = [
   },
   {
     id: '001',
-    nama: 'Yuga',
+    nama: 'Batu',
     gender: 'Pria',
     kategori: 'Prenatal',
     lokasi: 'Jakarta Selatan',
     rating: 4.9,
     harga: 500,
-    foto: './img/1.jpg',
+    foto: './img/001.jpg',
   },
   new Terapis(
     '002',
-    'Iir',
+    'Mas Kacang',
     'Pria',
     'Olahraga',
     'Jakarta Pusat',
@@ -449,33 +449,33 @@ let listTerapis = [
   ),
   new Terapis(
     '003',
-    'Wati',
+    'Kebaya Merah',
     'Wanita',
     'Refleksi',
     'Jakarta Utara',
     4.5,
     400,
-    './img/1.jpg'
+    './img/003.jpg'
   ),
   new Terapis(
     '004',
-    'Bulma',
+    'Miniwati',
     'Wanita',
     'Jaringan Dalam',
     'Jakarta Timur',
     4.5,
     300,
-    './img/1.jpg'
+    './img/004.jpeg'
   ),
   new Terapis(
     '005',
-    'Sari',
+    'Ariel',
     'Wanita',
     'Aromaterapi',
     'Jakarta Timur',
     4.5,
     200,
-    './img/1.jpg'
+    './img/005.png'
   ),
   new Terapis(
     '006',
@@ -485,21 +485,21 @@ let listTerapis = [
     'Jakarta Barat',
     4.5,
     100,
-    './img/1.jpg'
+    './img/3.jpeg'
   ),
   new Terapis(
     '007',
-    'Bro',
+    'Daddy',
     'Pria',
     'Jaringan Dalam',
     'Jakarta Timur',
     4.5,
     800,
-    './img/1.jpg'
+    './img/007.jpg'
   ),
   new Terapis(
     '008',
-    'Sister',
+    'Meng',
     'Wanita',
     'Aromaterapi',
     'Jakarta Timur',
