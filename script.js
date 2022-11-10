@@ -324,7 +324,7 @@ let listTerapis = [
     kategori: 'Prenatal',
     lokasi: 'Jakarta Selatan',
     rating: 4.9,
-    harga: 1000,
+    harga: 850,
     foto: './img/22.jpeg',
   },
   {
@@ -344,7 +344,7 @@ let listTerapis = [
     kategori: 'Refleksi',
     lokasi: 'Jakarta Barat',
     rating: 4.6,
-    harga: 5000,
+    harga: 950,
     foto: './img/24.jpeg',
   },
   {
@@ -364,7 +364,7 @@ let listTerapis = [
     kategori: 'Jaringan Dalam',
     lokasi: 'Jakarta Selatan',
     rating: 4.5,
-    harga: 5000,
+    harga: 950,
     foto: './img/26.jpeg',
   },
   {
