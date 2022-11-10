@@ -1,255 +1,374 @@
 <!DOCTYPE html>
+<html lang="en">
 
-<html>
-  <head>
-    <link rel="stylesheet" href="style.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  </head>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet" /> -->
 
-  <body>
-    <div class="container">
-      <div class="header">
-        <h1>🖤 PIJAT ENA</h1>
-        <ul>
-          <li id="btn-lihat-pesanan">Pesanan</li>
-          <li>Profil</li>
-        </ul>
-      </div>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
 
-      <div class="sidebar">
-        <!-- <h3>Filter</h3> -->
-        <form class="massage-category">
-          <h4 class="filter-label">Kategori Pijat</h4>
-          <input
-            type="checkbox"
-            id="aromaterapi"
-            name="aromaterapi"
-            value="Aromaterapi"
-          />
-          <label for="aromaterapi">Aromaterapi</label><br />
-          <input
-            type="checkbox"
-            id="jaringan-dalam"
-            name="jaringan-dalam"
-            value="Jaringan Dalam"
-          />
-          <label for="jaringan-dalam">Jaringan Dalam</label><br />
-          <input
-            type="checkbox"
-            id="prenatal"
-            name="prenatal"
-            value="Prenatal"
-          />
-          <label for="prenatal">Prenatal</label><br />
-          <input
-            type="checkbox"
-            id="Refleksi"
-            name="Refleksi"
-            value="Refleksi"
-          />
-          <label for="Refleksi">Refleksi</label><br />
-          <input
-            type="checkbox"
-            id="olahraga"
-            name="olahraga"
-            value="Olahraga"
-          />
-          <label for="olahraga">Olahraga</label><br />
-          <!-- <input type="submit" value="Submit" /> -->
-        </form>
-        <form class="location">
-          <h4 class="filter-label">Lokasi</h4>
-          <input
-            type="checkbox"
-            id="Jakarta-Pusat"
-            name="Jakarta-Pusat"
-            value="Jakarta Pusat"
-          />
-          <label for="Jakarta-Pusat">Jakarta Pusat</label><br />
-          <input
-            type="checkbox"
-            id="Jakarta-Selatan"
-            name="Jakarta-Selatan"
-            value="Jakarta Selatan"
-          />
-          <label for="Jakarta-Selatan">Jakarta Selatan</label><br />
-          <input
-            type="checkbox"
-            id="Jakarta-Barat"
-            name="Jakarta-Barat"
-            value="Jakarta Barat"
-          />
-          <label for="Jakarta-Barat">Jakarta Barat</label><br />
-          <input
-            type="checkbox"
-            id="Jakarta-Timur"
-            name="Jakarta-Timur"
-            value="Jakarta Timur"
-          />
-          <label for="Jakarta-Timur">Jakarta Timur</label><br />
-          <input
-            type="checkbox"
-            id="Jakarta-Utara"
-            name="Jakarta-Utara"
-            value="Jakarta Utara"
-          />
-          <label for="Jakarta-Utara">Jakarta Utara</label><br />
-        </form>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style1.css">
 
-        <div class="gender">
-          <h4 class="filter-label">Gender Terapis</h4>
-          <!-- <form>
-            <input type="radio" id="pria" name="gender" value="pria" />
-            <label for="html">Pria</label><br />
-            <input type="radio" id="wanita" name="gender" value="wanita" />
-            <label for="javascript">Wanita</label>
-          </form> -->
-          <form class="gender-form">
-            <input type="checkbox" id="Pria" name="Pria" value="Pria" />
-            <label for="Pria">Pria</label><br />
-            <input type="checkbox" id="wanita" name="wanita" value="Wanita" />
-            <label for="wanita"> Wanita</label><br />
-          </form>
+    <!-- BOXICONS CSS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="style2.css">
+    <link rel=”icon” href=”./img/logo3.png”>
+    <title>Pijet Ena-Ena</title>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <div class="nav">
+        <div class="nav-left">
+            <img src="./img/logo3.png" alt="" class="nav-logo">
+            <a href="#" style="font-size: 25px; font-weight:600">Pijet Ena</a>
         </div>
-
-        <div class="price">
-          <h4 class="filter-label">Harga</h4>
-          <input
-            type="number"
-            placeholder="Harga Minimum"
-            class="price-input"
-            style="margin-bottom: 0.4rem"
-            id="price-min"
-          />
-          <br />
-          <input
-            type="number"
-            placeholder="Harga Maksimum"
-            class="price-input"
-            id="price-max"
-          />
+        <div class="nav-right">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarText">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 px-3">
+                            <li class="nav-item px-3">
+                                <a class="nav-link" aria-current="page" href="#">ABOUT</a>
+                            </li>
+                            <li class="nav-item px-3">
+                                <a class="nav-link" href="#service">SERVICE</a>
+                            </li>
+                            <li class="nav-item px-3">
+                                <a class="nav-link" href="#kangPijat">KANG PIJAT</a>
+                            </li>
+                            <li class="nav-item px-3">
+                                <a class="nav-link" href="#testimoni">TESTIMONI</a>
+                            </li>
+                            <li class="nav-item px-3">
+                                <a class="nav-link" href="#footer">CONTACT US</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
         </div>
+    </div>
+    <!-- NAVBAR END -->
 
-        <!-- <button class="btn-filter">Tes</button> -->
+    <!-- carousel -->
+    <div class="about-us-container">
+        <div class="about-us-box">
+            <h1>~ Pijet Ena ~</h1>
+            <p>Pijat Plus Minus Adalah Penyedia Jasa Yang Berdiri Dari Tahun 2010. Menyediakan Jasa Layanan Pijat Untuk
+                Costumer Yang Merasa Rumah Adalah Tempat Ternayaman. Kami Siap Datang Ke Rumah Anda Sesuai Jadwal
+                Panggilan Yang Anda Tentukan. Anda Dapat Memanggil Kami Kapan Pun Anda Mau. Ahli Pijat Yang Kami Miliki
+                Adalah Ahli Pijat Yang Sudah Bersertifikat Yang Tidak Perlu Diragukan Lagi Keahliannya.</p>
+        </div>
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" style=" margin: 100px 40px 50px 500px; box-shadow: 0px 2px 28px -6px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 2px 28px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 28px -6px rgba(0,0,0,0.75);">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./img/pijet.jpg" class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" style="min-width: 800;
+                    min-height: 500" alt="...">
 
-        <!-- <div class="btn-filter">
-          <button class="btn-filter">Filter</button>
+                    <div class="carousel-caption d-none d-md-block ai" style="height: 150px; margin-bottom: 20px;">
+                        <!-- <h5 style="font-size: 25px;">WELCOME TO THE PIJET ENA !</h5> -->
+                        <p style="font-size: 22px; color: #fff;">Your pleasures is our priority.</p>
+                        <p style="font-size: 18px; color: #fff;">Feel The Pleasure Of Relaxation When You Are Tired Of
+                            Activities Using The Best On-Call Massage Service From Pijat Ena.</p>
+                    </div>
+                </div>
+                <div class="carousel-item ">
+                    <img src="./img/china.jpg" class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" style="min-width: 800;
+                    min-height: 500" alt="...">
+
+                    <div class="carousel-caption d-none d-md-block ai" style="height: 150px; margin-bottom: 20px;">
+                        <!-- <h5 style="font-size: 25px;">WELCOME TO THE PIJET ENA !</h5> -->
+                        <p style="font-size: 22px; color: #fff;">Your pleasures is our priority.</p>
+                        <p style="font-size: 18px; color: #fff;">Feel The Pleasure Of Relaxation When You Are Tired Of
+                            Activities Using The Best On-Call Massage Service From Pijat Ena.</p>
+                    </div>
+                </div>
+                <div class="carousel-item ">
+                    <img src="/img/thai.png" class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" style="min-width: 800;
+                    height: 500" alt="...">
+
+                    <div class="carousel-caption d-none d-md-block ai" style="height: 150px; margin-bottom: 20px;">
+                        <!-- <h5 style="font-size: 25px;">WELCOME TO THE PIJET ENA !</h5> -->
+                        <p style="font-size: 22px; color: #fff;">Your pleasures is our priority.</p>
+                        <p style="font-size: 18px; color: #fff;">Feel The Pleasure Of Relaxation When You Are Tired Of
+                            Activities Using The Best On-Call Massage Service From Pijat Ena.</p>
+                    </div>
+                </div>
+
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon aii" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon aii" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <!-- carousel end -->
+
+
+    <!-- service -->
+    <h2 style="text-align: center; margin: 100px 0px 25px 0px;"> Layanan Pijat Ena untuk Tubuh Kamu!</h2>
+    <div class="service" style="position: relative" id="service">
+        <div class="service-box">
+            <img class="service-img" src="body oil.jpg" alt="">
+            <p class="service-title">Prenatal Massage</p>
+        </div>
+        <div class="service-box ">
+            <img class="service-img" src="vitalitas.jpg" alt="">
+            <p class="service-title">Jaringan Dalam Massage</p>
+        </div>
+        <div class="service-box ">
+            <img class="service-img" src="traditional.jpg" alt="">
+            <p class="service-title">Aromaterapi Massage</p>
+        </div>
+        <div class="service-box">
+            <img class="service-img" src="lulur.jpg" alt="">
+            <p class="service-title">Refleksi Massage</p>
+        </div>
+        <div class="service-box ">
+            <img class="service-img" src="kerikan.jpg" alt="">
+            <p class="service-title">Olahraga Massage</p>
+        </div>
+    </div>
+    <div class="service" style="position: relative">
+
+    </div>
+
+
+    <!-- service end -->
+
+    <!-- kang pijet -->
+
+    <div class="kang-pijet" id="kangPijat">
+        <div class="kang-pijet-intro">
+            <h2>Rekomendasi Kang Pijat!</h2>
+            <p>Yuk kenali Kang Pijat yang ahli dalam permasalahan badanmu dan siap membantumu menemukan jalan keluar.
+            </p>
+        </div>
+        <div class="kang-pijet-box">
+
+            <div class="kang-pijet-card" style="min-width: 200px; height: 300px; ">
+                <img src="./img/kang pijet/yana2.jpeg"
+                    style="max-width: 200px; height:150px; border-radius: 3px; padding: 0 0 20px 0;"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h4>Yana Yini</h4>
+                    <p class="card-text">"Pemegang rekor muri pijit 24 jam nonstop"</p>
+                </div>
+            </div>
+            <div class=" kang-pijet-card" style="min-width: 200px; height: 300px;">
+                <img src="/img/kang pijet/nabil.jpeg"
+                    style="max-width: 200px; height:150px; border-radius: 3px; padding: 0 0 20px 0;"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h4>Ababil</h4>
+                    <p class="card-text">"Lulusan Magister Ilmu Teknik Pemijitan"</p>
+                </div>
+            </div>
+            <div class=" kang-pijet-card" style="min-width: 200px; max-height: 300px;">
+                <img src="/img/kang pijet/faza.jpeg" class="card-img-top" alt="..."
+                    style="max-width: 200px; height:150px; border-radius: 3px; padding: 0 0 20px 0;">
+                <div class="card-body">
+                    <h4>Fizi</h4>
+                    <p class="card-text">"Sudah Melayani pijet online dari sabang sampai meroeke"</p>
+                </div>
+            </div>
+            <div class=" kang-pijet-card" style="min-width: 200px; max-height: 300px;">
+                <img src="/img/kang pijet/argi.jpeg" class="card-img-top" alt="..."
+                    style="max-width: 200px; height:150px; border-radius: 3px; padding: 0 0 20px 0;">
+                <div class="card-body">
+                    <h4>Argoy</h4>
+                    <p class="card-text">"Kang Pijet senior, 10 tahun bekerja sebagai tukang pijet di Pijet Ena"</p>
+                </div>
+            </div>
+            <div class=" kang-pijet-card" style="min-width: 200px; max-height: 300px;">
+                <img src="/img/kang pijet/lina.jpeg" class="card-img-top" alt="..."
+                    style="max-width: 200px; height:150px; border-radius: 3px; padding: 0 0 20px 0;">
+                <div class="card-body">
+                    <h4>Lina</h4>
+                    <p class="card-text">"Salah satu pegawai terbaik di Pijet Ena"</p>
+                </div>
+            </div>
+            <div class=" kang-pijet-card" style="min-width: 200px; max-height: 300px;">
+                <img src="/img/kang pijet/bahri.jpeg" class="card-img-top" alt="..."
+                    style="max-width: 200px; height:150px; border-radius: 3px; padding: 0 0 20px 0;">
+                <div class="card-body">
+                    <h4>Mbahrul</h4>
+                    <p class="card-text">"Pernah melayani Pak Presiden Jokowi di Pijet Ena"</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- kang pijet end -->
+
+    <!-- testimoni -->
+    <section class="container" style="display:flex; flex-direction:column;;">
+        <div style="margin-bottom: 0px;">
+            <H1 style="text-align: center; font-size: 35px;">Testimonials</H1>
+        </div>
+        <div class="testimonial mySwiper"">
+            <div class=" testi-content swiper-wrapper">
+            <div class="slide swiper-slide">
+                <img src="./img/anya.jpeg" alt="" class="image">
+                <p>“Enak banget!! setelah dipijet badan jadi rileks. Gak salah pilih deh pesen pijet di Pijet Ena”</p>
+
+                <i class='bx bxs-quote-alt-left quote-icon'></i>
+
+                <div class="details">
+                    <span class="name">Ani Geraldin</span>
+                    <span class="job">Selebritis</span>
+                </div>
+            </div>
+            <div class="slide swiper-slide">
+                <img src="./img/cr2.avif" alt="" class="image">
+                <p>“Setelah pertandingan saya melawan Arsenal, saya pesan pijet online di Pijet Ena. Pijatan dari kang
+                    pijetnya sangat SIIIUUUUU!!!”</p>
+
+                <i class='bx bxs-quote-alt-left quote-icon'></i>
+
+                <div class="details">
+                    <span class="name">CR7</span>
+                    <span class="job">Pemain Bola</span>
+                </div>
+            </div>
+            <div class="slide swiper-slide">
+                <img src="./img/nichol.jpeg" alt="" class="image">
+                <p>“Bagi aktor seperti saya, pijet adalah hal yang sangat dibutuhkan untuk memanjakan diri setelah lelah
+                    beraktifitas syuting sepanjang hari”</p>
+
+                <i class='bx bxs-quote-alt-left quote-icon'></i>
+
+                <div class="details">
+                    <span class="name">Nicholas Saputro</span>
+                    <span class="job">Actor</span>
+                </div>
+            </div>
+            <div class="slide swiper-slide">
+                <img src="./img/puan.jpeg" alt="" class="image">
+                <p>“Mau pesan pas rapat juga bisa loh! Pesan pijet di Pijet Ena beneran bikin nyaman, bisa pesan dimana
+                    saja dan kapan saja”</p>
+
+                <i class='bx bxs-quote-alt-left quote-icon'></i>
+
+                <div class="details">
+                    <span class="name">Puan Maharani</span>
+                    <span class="job">Ketua DPR</span>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-button-next nav-btn"></div>
+        <div class="swiper-button-prev nav-btn"></div>
+        <!-- <div class="swiper-pagination"></div> -->
+        </div>
+    </section>
+
+    <!-- Swiper Js -->
+    <script src="./js/swiper-bundle.min.js"></script>
+
+    <!-- testimoni end -->
+
+    <!-- footer -->
+    <footer class="footer" id="testimoni">
+        <div class="footer-left">
+            <div style="margin: 40px 0 20px 0; display: flex; justify-content: left;">
+                <i class='bx bxl-whatsapp logo-footer' style="font-size: 30px; margin-left: 20px; border-radius: 50%;padding: 5px;""></i>
+                <i class='bx bxl-instagram logo-footer' style="font-size: 30px; margin-left: 20px; border-radius: 50%;padding: 5px;"></i>
+                <i class='bx bxl-facebook logo-footer' style="font-size: 30px; margin-left: 20px; border-radius: 50%;padding: 5px;""></i>
+                <i class='bx bxl-telegram logo-footer' style="font-size: 30px; margin-left: 20px; border-radius: 50%;padding: 5px;""></i>
+                <i class='bx bxl-twitter logo-footer' style="font-size: 30px; margin-left: 20px; border-radius: 50%;padding: 5px;""></i>
+            </div>
+            <div style="display: flex; ">
+                <p class="footer-p" style="padding: 0 27px 0 20px; border-right: 1.5px solid black; cursor: pointer;">Account</p>
+                <p class="footer-p" style="padding: 0 27px; border-right: 1.5px solid black; cursor: pointer;">Subscription FAQ</p>
+                <p class="footer-p" style="padding: 0 27px; border-right: 1.5px solid black; cursor: pointer;">Policies</p>
+                <p class="footer-p" style="padding: 0 27px; cursor: pointer;">Shipping Policy</p>
+            </div>
+            <div>
+                <p style="text-align: left; padding-left: 20px; font-size: 12px;">© 2022 Starbucks Coffee Company. All
+                    rights reserved.</p>
+            </div>
+        </div>
+        <div class="footer-right">
+            <div class="footer-download">
+                <h5 style="padding-right: 20px; font-size: 17px;">Download App di</h5>
+                <img style="margin: 5px;cursor: pointer; width: 100px;" src="ic-applestore.svg" alt="">
+                <img style="margin: 5px; cursor: pointer; width: 100px" src="ic-playstore.svg" alt="">
+            </div>
+        </div>
+        <!-- <div class="footer-container">
+            <div class="footer-address">
+                <img src="" alt="">
+                <h5>Ena-Ena</h5>
+            </div>
+            <div class="footer-call">
+                <h5>Help</h5>
+                <br>
+                <p>Account</p>
+                <p>Subscription FAQ</p>
+                <p>Policies</p>
+                <p>Shipping Policy</p>
+            </div>
+
+            <div class="footer-download">
+                <h5>Download App di</h5>
+                <img style="margin: 15px;cursor: pointer;" src="ic-applestore.svg" alt="">
+                <img style="margin: 15px; cursor: pointer;" src="ic-playstore.svg" alt="">
+            </div>
+            <div class="footer-call" style="width: 200px;">
+                <h5>Contact Us</h5>
+                <i class='bx bxl-whatsapp logo-footer' style="font-size: 30px;"></i>
+                <i class='bx bxl-instagram' style="font-size: 30px;"></i>
+                <i class='bx bxl-facebook' style="font-size: 30px;"></i>
+                <i class='bx bxl-telegram' style="font-size: 30px;"></i>
+                <i class='bx bxl-twitter' style="font-size: 30px;"></i>
+            </div>
         </div> -->
-      </div>
+    </footer>
+    <!-- footer end -->
 
-      <div class="main">
-        <!--***TEMPLATE CARDS***-->
-        <div class="cards">
-          <img src="./img/2.webp" alt="" />
-          <div class="card-description">
-            <p class="card-name" id="card-name">
-              <span class="gender-icon">♂</span>Tesar Chandra
-            </p>
-            <p class="card-rating">⭐️ 4.9</p>
-            <p class="card-category">💆🏻 Pijat Prenatal</p>
-            <p class="card-price">💵 Rp500rb/jam</p>
-            <p class="card-location">📍 J. Selatan</p>
-            <button class="btn-order-now" id="000">Pesan</button>
-          </div>
-        </div>
-        <!-- <div class="cards">2</div>
-        <div class="cards">3</div>
-        <div class="cards">4</div>
-        <div class="cards">5</div>
-        <div class="cards">6</div>
-        <div class="cards">6</div>
-        <div class="cards">6</div>
-        <div class="cards">6</div>
-        <div class="cards">6</div>
-        <div class="cards">6</div>
-        <div class="cards">6</div>
-        <div class="cards">6</div>
-        <div class="cards">6</div>
-        <div class="cards">6</div>
-        <div class="cards">6</div>
-        <div class="cards">6</div> -->
-      </div>
-    </div>
-    <div class="modal hidden">
-      <button class="close-modal">&times;</button>
-      <div class="modal-container">
-        <h1 class="modal-title">Detail Pesanan</h1>
-        <img class="modal-image" src="./img/3.jpeg" alt="" />
-        <div class="modal-info-terapis">
-          <h2 class="modal-nama-terapis">
-            <span class="gender-icon">♂</span>Tesar Chandra
-          </h2>
-          <p class="modal-detail-terapis">⭐️ 4.9</p>
-          <p class="modal-detail-terapis">💆🏻 Pijat Prenatal</p>
-          <p class="modal-detail-terapis">💵 Rp500rb/jam</p>
-          <p class="modal-detail-terapis">📍 Jakarta Selatan</p>
-        </div>
-        <div class="modal-input-text">
-          <form>
-            <input type="text" id="nama" name="nama" placeholder="Nama Kamu" />
-          </form>
-          <form>
-            <input type="text" id="alamat" name="alamat" placeholder="Alamat" />
-          </form>
-        </div>
-        <div class="modal-input-date-time">
-          <form class="modal-input-date">
-            <select id="tanggal" name="tanggal">
-              <option value="11 November">11 November</option>
-              <option value="12 November">12 November</option>
-              <option value="13 November">13 November</option>
-              <option value="14 November">14 November</option>
-            </select>
-          </form>
-          <input
-            type="time"
-            id="appt"
-            name="appt"
-            min="09:00"
-            max="18:00"
-            required
-          />
-          <form class="modal-duration">
-            <select id="durasi" name="durasi">
-              <option value="1 Jam">1 Jam</option>
-              <option value="2 Jam">2 Jam</option>
-              <option value="3 Jam">3 Jam</option>
-            </select>
-          </form>
-        </div>
-        <button class="modal-btn-pesan-terapi" id="xxx">
-          Pesan Terapis Sekarang
-        </button>
-      </div>
-    </div>
-    <div class="overlay hidden"></div>
+    <!-- order-->
+    <button class="order">
+        <a href="2.html">PESAN SEKARANG !</a>
+    </button>
+    <!-- order end -->
 
-    <div class="pesanan hidden">
-      <button class="close-pesanan">&times;</button>
-      <h1>Pesanan Kamu</h1>
-      <div class="pesanan-container">
-        <div class="pesanan-card">
-          <div class="hapus-pesanan"><img src="./img/hapus.png" alt="" /></div>
-          <div class="pesanan-image-container">
-            <img class="pesanan-image" src="./img/1.jpg" alt="" />
-          </div>
-          <div class="pesanan-terapis-detail">
-            <h3>Terapis Mantap</h3>
-            <p class="pesanan-detail-terapis">
-              💆🏻 Pijat Prenatal · Rp500rb/jam
-            </p>
-            <p class="pesanan-detail-terapis">🗓️ 11 November · 12.00 · 1 Jam</p>
-            <p class="pesanan-detail-terapis">📍 Jl. Tanah Kusir 2 no. 7</p>
-            <p class="pesanan-detail-terapis" id="total-pesanan">
-              💰 Total 1.5jt
-            </p>
-          </div>
-        </div>
-        <div class="pesanan-card">B</div>
-      </div>
-    </div>
-    <div class="pesanan-overlay hidden"></div>
+    <!-- Swiper Js -->
+    <script src="./js/swiper-bundle.min.js"></script>
 
-    <script type="module" src="script.js"></script>
-  </body>
+    <!-- JS -->
+    <script src="./js/1.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
 </html>
