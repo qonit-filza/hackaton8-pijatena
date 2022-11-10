@@ -16,6 +16,20 @@ html {
   background-color: #ffddd2;
 }
 
+.h1logo {
+  display: flex;
+  align-items: center;
+}
+
+.h1logo a {
+  text-decoration: none;
+}
+
+.nav-logo-p{
+  width: 60px;
+  margin-right: 15px;
+}
+
 .container {
   display: grid;
   margin: 7.5rem 20rem 7.5rem 20rem;
